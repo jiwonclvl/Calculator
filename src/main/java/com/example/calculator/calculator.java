@@ -26,10 +26,6 @@ public class calculator {
                     answer = (double) input1 / input2;
                     System.out.println(input1 + " " +operator + " " +input2+ " = " + answer);
                     break;
-
-                } else {
-                    System.out.println("분모에 0이 들어갈 수 없습니다.");
-                    break;
                 }
             default:
                 break;

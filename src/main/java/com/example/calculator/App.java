@@ -44,6 +44,10 @@ public class App{
                 System.out.println("\n올바르지 않은 연산자 입니다.\n");
                 continue;
             }
+            else if(input2 == 0 && operator == '/'){
+                System.out.println("분모에 0이 들어갈 수 없습니다.");
+                continue;
+            }
 
             double result = calculate.calculate(input1, input2, operator);
 
