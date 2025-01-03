@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class calculator {
     public static void main(String[] args) {
 
-        int input1, input2, answer;
+        int input1, input2, answer = 0;
         char operator;
         String end;
         Scanner sc = new Scanner(System.in);
@@ -17,30 +17,26 @@ public class calculator {
             System.out.print("양의 정수 입력:");
             input2 = sc.nextInt();
 
-//            if(input1 <0 ){
-//                System.out.println("양의 정수가 아닙니다.");
-//            }
-
             System.out.print("사칙연산 기호 입력:");
             operator = sc.next().charAt(0);
 
             switch (operator) {
                 case '+':
                     answer = input1 + input2;
-                    System.out.println("연산 결과:"+answer);
+                    System.out.println(input1 + " " +operator + " " +input2+ " = " + answer);
                     break;
                 case '-':
                     answer = input1 - input2;
-                    System.out.println("연산 결과:"+answer);
+                    System.out.println(input1 + " " +operator + " " +input2+ " = " + answer);
                     break;
                 case '*':
                     answer = input1 * input2;
-                    System.out.println("연산 결과:"+answer);
+                    System.out.println(input1 + " " +operator + " " +input2+ " = " + answer);
                     break;
                 case '/':
                     if (input2 != 0) {
                         answer = input1 / input2;
-                        System.out.println("연산 결과:" +answer);
+                        System.out.println(input1 + " " +operator + " " +input2+ " = " + answer);
                     } else {
                         System.out.println("분모에 0이 들어갈 수 없습니다.");
                     }
