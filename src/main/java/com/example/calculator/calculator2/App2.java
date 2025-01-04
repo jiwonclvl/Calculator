@@ -2,10 +2,10 @@ package com.example.calculator.calculator2;
 import java.util.List;
 import java.util.Scanner;
 
-public class App{
+public class App2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        calculator calculate = new calculator();
+        calculator2 calculate = new calculator2();
 
         do {
             int input1, input2;
@@ -36,8 +36,10 @@ public class App{
 
             calculate.calculate(input1, input2, operator);
 
-            System.out.print("더 계산하시겠습니까? (exit 입력시 연산 종료):\n");
-        } while (!"exit".equals(sc.next())) ;
+            System.out.print("더 계산하시겠습니까? (exit 입력시 연산 종료)\n");
+            sc.nextLine();
+
+        } while (!"exit".equals(sc.nextLine()));
 
         List<Double> list = calculate.getAnswerlist();
         calculate.setAnswerlist(list);

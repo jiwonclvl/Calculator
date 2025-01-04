@@ -1,7 +1,7 @@
 package com.example.calculator.calculator1;
 import java.util.Scanner;
 
-public class App {
+public class App1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -50,6 +50,7 @@ public class App {
             }
 
             System.out.print("더 계산하시겠습니까? (exit 입력시 연산 종료):");
+            sc.nextLine();
         } while (!"exit".equals(sc.next()));
     }
 }

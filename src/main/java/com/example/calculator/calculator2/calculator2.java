@@ -2,7 +2,7 @@ package com.example.calculator.calculator2;
 import java.util.ArrayList;
 import java.util.List;
 
-public class calculator {
+public class calculator2 {
     private List<Double> answerlist = new ArrayList<Double>();
 
     public void calculate (int input1, int input2,char operator) {
@@ -29,7 +29,6 @@ public class calculator {
                 //throws new 구현
                 break;
         }
-        System.out.println(input1 + " " + operator + " " + input2 + " = " + ((double) input1 / input2));
     }
 
     public List<Double> getAnswerlist() {
