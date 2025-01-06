@@ -41,7 +41,7 @@ public class App1 {
                     break;
                 case '/':
                     if (input2 != 0) {
-                        System.out.println("연산 결과:" + (input1 / input2));
+                        System.out.println("연산 결과:" + ((double) input1 / input2));
                         break;
                     }
                 default:
