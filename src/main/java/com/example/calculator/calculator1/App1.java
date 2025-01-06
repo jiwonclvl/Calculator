@@ -51,6 +51,7 @@ public class App1 {
 
             System.out.print("더 계산하시겠습니까? (exit 입력시 연산 종료):");
             sc.nextLine();
-        } while (!"exit".equals(sc.next()));
+
+        } while (!"exit".equals(sc.nextLine()));
     }
 }
