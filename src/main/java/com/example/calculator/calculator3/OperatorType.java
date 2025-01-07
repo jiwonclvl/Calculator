@@ -1,44 +1,41 @@
 package com.example.calculator.calculator3;
 
 public enum OperatorType {
-    PLUS("+") {
+    PLUS('+') {
         @Override
         public double apply(int input1, int input2) {
             return input1 + input2;
         }
     },
-    MINUS("-") {
+    MINUS('-') {
         @Override
         public double apply(int input1, int input2) {
             return input1 - input2;
         }
     },
-    MULTI("*") {
+    MULTI('*') {
         @Override
         public double apply(int input1, int input2) {
             return input1 * input2;
         }
     },
-    DIVIDE("/") {
+    DIVIDE('/') {
         @Override
         public double apply(int input1, int input2) {
-            return (double) input1 / input2;
+            return  (double) input1 / input2;
         }
     };
 
     //필드
-    private String symbol;
+    private char symbol;
 
     // 생성자
-    OperatorType(String symbol) {
+    OperatorType(char symbol) {
         this.symbol = symbol;
     }
 
     //추상 메서드 생성
     public abstract double apply(int input1, int input2);
 
-    //외부로 symbol 넘기기
-    public String getSymbol() {
-        return symbol;
-    }
+
 }
