@@ -17,6 +17,7 @@ public class App1 {
 
             if (firstInteger < 0 || secondInteger < 0) {
                 System.out.println("\n양의 정수를 입력해주세요.\n");
+                continue;
             }
 
             System.out.print("사칙연산 기호 입력:");
@@ -24,9 +25,11 @@ public class App1 {
 
             if (operator != '+' && operator != '-' && operator != '*' && operator != '/') {
                 System.out.println("\n올바르지 않은 연산자 입니다.\n");
+                continue;
             }
             if (secondInteger == 0 && operator == '/') {
                 System.out.println("분모에 0이 들어갈 수 없습니다.");
+                continue;
             }
 
             switch (operator) {
@@ -40,10 +43,9 @@ public class App1 {
                     System.out.println("연산 결과:" + (firstInteger * secondInteger));
                     break;
                 case '/':
-                    if (secondInteger != 0) {
-                        System.out.println("연산 결과:" + ((double) firstInteger / secondInteger));
-                        break;
-                    }
+                    System.out.println("연산 결과:" + ((double) firstInteger / secondInteger));
+                    break;
+
                 default:
                     // throws new 적용
                     break;
