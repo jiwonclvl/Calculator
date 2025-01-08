@@ -4,24 +4,24 @@ import java.util.List;
 
 public class Calculator {
     private List<Double> answerlist = new ArrayList<Double>();
-    CalculationResult result = new CalculationResult();
+
 
     public void calculate (int firstInteger, int secondInteger, char operator) {
         switch (operator) {
             case '+':
-                result.calculationResult(firstInteger, secondInteger, operator, (double) firstInteger + secondInteger);
+                printResult(firstInteger, secondInteger, operator, (double) firstInteger + secondInteger);
                 answerlist.add((double) firstInteger + secondInteger);
                 break;
             case '-':
-                result.calculationResult(firstInteger, secondInteger, operator, (double) firstInteger - secondInteger);
+                printResult(firstInteger, secondInteger, operator, (double) firstInteger - secondInteger);
                 answerlist.add((double) firstInteger - secondInteger);
                 break;
             case '*':
-                result.calculationResult(firstInteger, secondInteger, operator, (double) firstInteger * secondInteger);
+                printResult(firstInteger, secondInteger, operator, (double) firstInteger * secondInteger);
                 answerlist.add((double) firstInteger * secondInteger);
                 break;
             case '/':
-                result.calculationResult(firstInteger, secondInteger, operator, (double) firstInteger / secondInteger);
+                printResult(firstInteger, secondInteger, operator, (double) firstInteger / secondInteger);
                 answerlist.add((double) firstInteger / secondInteger);
                 break;
             default:
@@ -32,6 +32,10 @@ public class Calculator {
 
     public List<Double> getAnswerlist() {
         return answerlist;
+    }
+
+    public void printResult (int firstInteger, int secondInteger, char operator, double result) {
+        System.out.println(firstInteger + " " + operator + " " + secondInteger + " = " + result);
     }
 
     public void setAnswerlist(List<Double> Deletelist) {
