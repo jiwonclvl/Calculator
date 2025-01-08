@@ -13,27 +13,27 @@ public class ArithmeticCalculator {
     OperatorType divide = OperatorType.DIVIDE;
 
 
-    public void calculate(int input1, int input2, char operator) {
+    public void calculate(int firstInteger, int secondInteger, char operator) {
         switch (operator) {
             case '+':
-                answer = plus.apply(input1, input2);
-                System.out.println(input1 + " " + operator + " " + input2 + " = " + answer);
+                answer = plus.apply(firstInteger, secondInteger);
+                System.out.println(firstInteger + " " + operator + " " + secondInteger + " = " + answer);
                 answerlist.add(answer);
                 break;
             case '-':
-                answer = minus.apply(input1, input2);
-                System.out.println(input1 + " " + operator + " " + input2 + " = " + answer);
+                answer = minus.apply(firstInteger, secondInteger);
+                System.out.println(firstInteger + " " + operator + " " + secondInteger + " = " + answer);
                 answerlist.add(answer);
                 break;
             case '*':
-                answer = multi.apply(input1, input2);
-                System.out.println(input1 + " " + operator + " " + input2 + " = " + answer);
+                answer = multi.apply(firstInteger, secondInteger);
+                System.out.println(firstInteger + " " + operator + " " + secondInteger + " = " + answer);
                 answerlist.add(answer);
                 break;
             case '/':
-                answer = divide.apply(input1, input2);
-                if (input2 != 0) {
-                    System.out.println(input1 + " " + operator + " " + input2 + " = " + answer);
+                answer = divide.apply(firstInteger, secondInteger);
+                if (secondInteger != 0) {
+                    System.out.println(firstInteger + " " + operator + " " + secondInteger + " = " + answer);
                     answerlist.add(answer);
                     break;
                 }

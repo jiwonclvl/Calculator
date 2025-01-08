@@ -8,16 +8,16 @@ public class App2 {
         calculator2 calculate = new calculator2();
 
         do {
-            int input1, input2;
+            int firstInteger, secondInteger;
             char operator;
 
             System.out.print("양의 정수 입력:");
-            input1 = sc.nextInt();
+            firstInteger = sc.nextInt();
 
             System.out.print("양의 정수 입력:");
-            input2 = sc.nextInt();
+            secondInteger = sc.nextInt();
 
-            if (input1 < 0 || input2 < 0) {
+            if (firstInteger < 0 || secondInteger < 0) {
                 System.out.println("\n양의 정수를 입력해주세요.\n");
                 continue;
             }
@@ -29,12 +29,12 @@ public class App2 {
                 System.out.println("\n올바르지 않은 연산자 입니다.\n");
                 continue;
             }
-            if (input2 == 0 && operator == '/') {
+            if (secondInteger == 0 && operator == '/') {
                 System.out.println("분모에 0이 들어갈 수 없습니다.");
                 continue;
             }
 
-            calculate.calculate(input1, input2, operator);
+            calculate.calculate(firstInteger, secondInteger, operator);
 
             System.out.print("더 계산하시겠습니까? (exit 입력시 연산 종료)\n");
             sc.nextLine();

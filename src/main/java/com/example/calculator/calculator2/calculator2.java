@@ -5,24 +5,24 @@ import java.util.List;
 public class calculator2 {
     private List<Double> answerlist = new ArrayList<Double>();
 
-    public void calculate (int input1, int input2,char operator) {
+    public void calculate (int firstInteger, int secondInteger, char operator) {
         switch (operator) {
             case '+':
-                System.out.println(input1 + " " + operator + " " + input2 + " = " + (input1 + input2));
-                answerlist.add((double) input1 + input2);
+                System.out.println(firstInteger + " " + operator + " " + secondInteger + " = " + (firstInteger + secondInteger));
+                answerlist.add((double) firstInteger + secondInteger);
                 break;
             case '-':
-                System.out.println(input1 + " " + operator + " " + input2 + " = " + (input1 - input2));
-                answerlist.add((double) input1 - input2);
+                System.out.println(firstInteger + " " + operator + " " + secondInteger + " = " + (firstInteger - secondInteger));
+                answerlist.add((double) firstInteger - secondInteger);
                 break;
             case '*':
-                System.out.println(input1 + " " + operator + " " + input2 + " = " + (input1 * input2));
-                answerlist.add((double) input1 * input2);
+                System.out.println(firstInteger + " " + operator + " " + secondInteger + " = " + (firstInteger * secondInteger));
+                answerlist.add((double) firstInteger * secondInteger);
                 break;
             case '/':
-                if (input2 != 0) {
-                    System.out.println(input1 + " " + operator + " " + input2 + " = " + ((double) input1 / input2));
-                    answerlist.add((double) input1 / input2);
+                if (secondInteger != 0) {
+                    System.out.println(firstInteger + " " + operator + " " + secondInteger + " = " + ((double) firstInteger / secondInteger));
+                    answerlist.add((double) firstInteger / secondInteger);
                     break;
                 }
             default:
