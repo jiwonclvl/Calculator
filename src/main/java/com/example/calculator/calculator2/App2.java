@@ -39,23 +39,25 @@ public class App2 {
                 continue;
             }
             if (secondNum == 0 && "/".equals(inputOperator)) {
-                System.out.println("분모에 0이 들어갈 수 없습니다.");
+                System.out.println("\n분모에 0이 들어갈 수 없습니다.\n");
                 continue;
             }
 
             calculate.calculate(firstNum, secondNum, inputOperator);
+
+            double result = calculate.printResult();
+            System.out.println(firstNum + " " + inputOperator + " " + secondNum + " = " + result);
 
             System.out.print("더 계산하시겠습니까? (exit 입력시 연산 종료)\n");
             sc.nextLine();
 
         } while (!"exit".equals(sc.nextLine()));
 
-        List<Double> list = calculate.getAnswerlist();
-        calculate.setAnswerlist(list);
+        List<Double> list = calculate.getAnswerList();
 
         System.out.print("첫번째 값 삭제를 원한다면 y를 눌러주세요. y/n\n");
         if ("y".equals(sc.nextLine())) {
-            calculate.setAnswerlist(list);
+            calculate.setAnswerList(list);
         } else {
             System.out.print("계산을 종료합니다.\n");
         }
