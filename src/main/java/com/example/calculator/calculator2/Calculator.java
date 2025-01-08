@@ -2,25 +2,26 @@ package com.example.calculator.calculator2;
 import java.util.ArrayList;
 import java.util.List;
 
-public class calculator2 {
+public class Calculator {
     private List<Double> answerlist = new ArrayList<Double>();
+    CalculationResult result = new CalculationResult();
 
     public void calculate (int firstInteger, int secondInteger, char operator) {
         switch (operator) {
             case '+':
-                System.out.println(firstInteger + " " + operator + " " + secondInteger + " = " + (firstInteger + secondInteger));
+                result.calculationResult(firstInteger, secondInteger, operator, (double) firstInteger + secondInteger);
                 answerlist.add((double) firstInteger + secondInteger);
                 break;
             case '-':
-                System.out.println(firstInteger + " " + operator + " " + secondInteger + " = " + (firstInteger - secondInteger));
+                result.calculationResult(firstInteger, secondInteger, operator, (double) firstInteger - secondInteger);
                 answerlist.add((double) firstInteger - secondInteger);
                 break;
             case '*':
-                System.out.println(firstInteger + " " + operator + " " + secondInteger + " = " + (firstInteger * secondInteger));
+                result.calculationResult(firstInteger, secondInteger, operator, (double) firstInteger * secondInteger);
                 answerlist.add((double) firstInteger * secondInteger);
                 break;
             case '/':
-                System.out.println(firstInteger + " " + operator + " " + secondInteger + " = " + ((double) firstInteger / secondInteger));
+                result.calculationResult(firstInteger, secondInteger, operator, (double) firstInteger / secondInteger);
                 answerlist.add((double) firstInteger / secondInteger);
                 break;
             default:
