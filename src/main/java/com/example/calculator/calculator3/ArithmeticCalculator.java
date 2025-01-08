@@ -32,11 +32,9 @@ public class ArithmeticCalculator {
                 break;
             case '/':
                 answer = divide.apply(firstInteger, secondInteger);
-                if (secondInteger != 0) {
-                    System.out.println(firstInteger + " " + operator + " " + secondInteger + " = " + answer);
-                    answerlist.add(answer);
-                    break;
-                }
+                System.out.println(firstInteger + " " + operator + " " + secondInteger + " = " + answer);
+                answerlist.add(answer);
+                break;
             default:
                 //throws new 구현
                 break;

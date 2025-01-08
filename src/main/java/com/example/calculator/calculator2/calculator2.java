@@ -20,11 +20,9 @@ public class calculator2 {
                 answerlist.add((double) firstInteger * secondInteger);
                 break;
             case '/':
-                if (secondInteger != 0) {
-                    System.out.println(firstInteger + " " + operator + " " + secondInteger + " = " + ((double) firstInteger / secondInteger));
-                    answerlist.add((double) firstInteger / secondInteger);
-                    break;
-                }
+                System.out.println(firstInteger + " " + operator + " " + secondInteger + " = " + ((double) firstInteger / secondInteger));
+                answerlist.add((double) firstInteger / secondInteger);
+                break;
             default:
                 //throws new 구현
                 break;
