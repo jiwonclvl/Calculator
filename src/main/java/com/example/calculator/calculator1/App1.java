@@ -1,23 +1,41 @@
 package com.example.calculator.calculator1;
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class App1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         do {
-            int firstInteger, secondInteger;
+            int firstNum, secondNum;
             String operators = "+ - * /";
             String operator;
 
-            System.out.print("양의 정수 입력:");
-            firstInteger = sc.nextInt();
+            // 첫번째 정수 입력
+            try {
+                System.out.print("1번째 양의 정수 입력:");
+                firstNum = sc.nextInt();
 
-            System.out.print("양의 정수 입력:");
-            secondInteger = sc.nextInt();
+                if (firstNum < 0) {
+                    System.out.println("\n양의 정수를 입력해주세요.\n");
+                    continue;
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("\n정수만 입력해주세요.\n");
+                continue;
+            }
 
-            if (firstInteger < 0 || secondInteger < 0) {
-                System.out.println("\n양의 정수를 입력해주세요.\n");
+            // 두번째 정수 입력
+            try {
+                System.out.print("2번째 양의 정수 입력:");
+                secondNum = sc.nextInt();
+
+                if (secondNum < 0) {
+                    System.out.println("\n양의 정수를 입력해주세요.\n");
+                    continue;
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("\n정수만 입력해주세요.\n");
                 continue;
             }
 
@@ -28,23 +46,23 @@ public class App1 {
                 System.out.println("\n올바르지 않은 연산자 입니다.\n");
                 continue;
             }
-            if (secondInteger == 0 && "/".equals(operator)) {
+            if (secondNum == 0 && "/".equals(operator)) {
                 System.out.println("분모에 0이 들어갈 수 없습니다.");
                 continue;
             }
 
             switch (operator) {
                 case "+":
-                    System.out.println("연산 결과:" + (firstInteger + secondInteger));
+                    printResult (firstNum + secondNum);
                     break;
                 case "-":
-                    System.out.println("연산 결과:" + (firstInteger - secondInteger));
+                    printResult (firstNum - secondNum);
                     break;
                 case "*":
-                    System.out.println("연산 결과:" + (firstInteger * secondInteger));
+                    printResult (firstNum * secondNum);
                     break;
                 case "/":
-                    System.out.println("연산 결과:" + ((double) firstInteger / secondInteger));
+                    printResult ((double) firstNum / secondNum);
                     break;
 
                 default:
@@ -56,5 +74,9 @@ public class App1 {
             sc.nextLine();
 
         } while (!"exit".equals(sc.nextLine()));
+    }
+
+    public static void printResult(double result) {
+        System.out.println("연산 결과:" + result);
     }
 }
