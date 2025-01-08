@@ -6,21 +6,21 @@ public class Calculator {
     private List<Double> answerlist = new ArrayList<Double>();
 
 
-    public void calculate (int firstInteger, int secondInteger, char operator) {
+    public void calculate (int firstInteger, int secondInteger, String operator) {
         switch (operator) {
-            case '+':
+            case "+":
                 printResult(firstInteger, secondInteger, operator, (double) firstInteger + secondInteger);
                 answerlist.add((double) firstInteger + secondInteger);
                 break;
-            case '-':
+            case "-":
                 printResult(firstInteger, secondInteger, operator, (double) firstInteger - secondInteger);
                 answerlist.add((double) firstInteger - secondInteger);
                 break;
-            case '*':
+            case "*":
                 printResult(firstInteger, secondInteger, operator, (double) firstInteger * secondInteger);
                 answerlist.add((double) firstInteger * secondInteger);
                 break;
-            case '/':
+            case "/":
                 printResult(firstInteger, secondInteger, operator, (double) firstInteger / secondInteger);
                 answerlist.add((double) firstInteger / secondInteger);
                 break;
@@ -34,7 +34,7 @@ public class Calculator {
         return answerlist;
     }
 
-    public void printResult (int firstInteger, int secondInteger, char operator, double result) {
+    public void printResult (int firstInteger, int secondInteger, String operator, double result) {
         System.out.println(firstInteger + " " + operator + " " + secondInteger + " = " + result);
     }
 

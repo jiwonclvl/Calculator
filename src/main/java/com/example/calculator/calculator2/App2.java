@@ -5,11 +5,12 @@ import java.util.Scanner;
 public class App2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        calculator2 calculate = new calculator2();
+        Calculator calculate = new Calculator();
 
         do {
             int firstInteger, secondInteger;
-            char operator;
+            String operators = "+ - * /";
+            String operator;
 
             System.out.print("양의 정수 입력:");
             firstInteger = sc.nextInt();
@@ -23,13 +24,13 @@ public class App2 {
             }
 
             System.out.print("사칙연산 기호 입력:");
-            operator = sc.next().charAt(0);
+            operator = sc.next();
 
-            if (operator != '+' && operator != '-' && operator != '*' && operator != '/') {
+            if (!operators.contains(operator)) {
                 System.out.println("\n올바르지 않은 연산자 입니다.\n");
                 continue;
             }
-            if (secondInteger == 0 && operator == '/') {
+            if (secondInteger == 0 && "/".equals(operator)) {
                 System.out.println("분모에 0이 들어갈 수 없습니다.");
                 continue;
             }

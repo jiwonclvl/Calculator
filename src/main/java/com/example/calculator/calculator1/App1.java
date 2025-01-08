@@ -7,7 +7,8 @@ public class App1 {
 
         do {
             int firstInteger, secondInteger;
-            char operator;
+            String operators = "+ - * /";
+            String operator;
 
             System.out.print("양의 정수 입력:");
             firstInteger = sc.nextInt();
@@ -21,28 +22,28 @@ public class App1 {
             }
 
             System.out.print("사칙연산 기호 입력:");
-            operator = sc.next().charAt(0);
+            operator = sc.next();
 
-            if (operator != '+' && operator != '-' && operator != '*' && operator != '/') {
+            if (!operators.contains(operator)) {
                 System.out.println("\n올바르지 않은 연산자 입니다.\n");
                 continue;
             }
-            if (secondInteger == 0 && operator == '/') {
+            if (secondInteger == 0 && "/".equals(operator)) {
                 System.out.println("분모에 0이 들어갈 수 없습니다.");
                 continue;
             }
 
             switch (operator) {
-                case '+':
+                case "+":
                     System.out.println("연산 결과:" + (firstInteger + secondInteger));
                     break;
-                case '-':
+                case "-":
                     System.out.println("연산 결과:" + (firstInteger - secondInteger));
                     break;
-                case '*':
+                case "*":
                     System.out.println("연산 결과:" + (firstInteger * secondInteger));
                     break;
-                case '/':
+                case "/":
                     System.out.println("연산 결과:" + ((double) firstInteger / secondInteger));
                     break;
 
