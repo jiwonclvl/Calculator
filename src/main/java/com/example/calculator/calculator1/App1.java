@@ -9,28 +9,17 @@ public class App1 {
         do {
             int firstNum, secondNum;
             String operators = "+ - * /";
-            String operator;
+            String inputOperator;
 
             // 첫번째 정수 입력
             try {
                 System.out.print("1번째 양의 정수 입력:");
                 firstNum = sc.nextInt();
 
-                if (firstNum < 0) {
-                    System.out.println("\n양의 정수를 입력해주세요.\n");
-                    continue;
-                }
-            } catch (InputMismatchException e) {
-                System.out.println("\n정수만 입력해주세요.\n");
-                continue;
-            }
-
-            // 두번째 정수 입력
-            try {
                 System.out.print("2번째 양의 정수 입력:");
                 secondNum = sc.nextInt();
 
-                if (secondNum < 0) {
+                if (firstNum < 0 || secondNum < 0) {
                     System.out.println("\n양의 정수를 입력해주세요.\n");
                     continue;
                 }
@@ -40,18 +29,18 @@ public class App1 {
             }
 
             System.out.print("사칙연산 기호 입력:");
-            operator = sc.next();
+            inputOperator = sc.next();
 
-            if (!operators.contains(operator)) {
+            if (!operators.contains(inputOperator)) {
                 System.out.println("\n올바르지 않은 연산자 입니다.\n");
                 continue;
             }
-            if (secondNum == 0 && "/".equals(operator)) {
+            if (secondNum == 0 && "/".equals(inputOperator)) {
                 System.out.println("분모에 0이 들어갈 수 없습니다.");
                 continue;
             }
 
-            switch (operator) {
+            switch (inputOperator) {
                 case "+":
                     printResult (firstNum + secondNum);
                     break;
@@ -66,7 +55,6 @@ public class App1 {
                     break;
 
                 default:
-                    // throws new 적용
                     break;
             }
 
