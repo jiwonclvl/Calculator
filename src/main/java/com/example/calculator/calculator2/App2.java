@@ -53,12 +53,12 @@ public class App2 {
         List<Double> list = calculate.getAnswerlist();
         calculate.setAnswerlist(list);
 
-//        System.out.print("첫번째 값 삭제를 원한다면 y를 눌러주세요. y/n\n");
-//        if ("y".equals(sc.nextLine())) {
-//            calculate.setAnswerlist(list);
-//        } else {
-//            System.out.print("계산을 종료합니다.\n");
-//        }
+        System.out.print("첫번째 값 삭제를 원한다면 y를 눌러주세요. y/n\n");
+        if ("y".equals(sc.nextLine())) {
+            calculate.setAnswerlist(list);
+        } else {
+            System.out.print("계산을 종료합니다.\n");
+        }
 
     }
 }
