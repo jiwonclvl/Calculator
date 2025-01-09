@@ -36,14 +36,14 @@ public class Calculator {
         return this.result;
     }
 
-    public void setResultList(List<Double> Deletelist) {
-        removeResult(Deletelist);
+    public void setResultList(List<Double> deleteList) {
+        removeResult(deleteList);
     }
 
     public void removeResult(List<Double> list) {
         System.out.print("첫번째 연산 값 " + list.get(0) + "을 삭제하였습니다.\n");
         list.remove(0);
 
-        System.out.print("연산 결과 리스트:" + list);
+        System.out.print("최종 결과 리스트:" + list);
     }
 }
