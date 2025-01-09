@@ -11,7 +11,7 @@ public class App1 {
             String operators = "+ - * /";
             String inputOperator;
 
-            // 첫번째 정수 입력
+            // 정수 입력 부분
             try {
                 System.out.print("1번째 양의 정수 입력:");
                 firstNum = sc.nextInt();
@@ -28,18 +28,27 @@ public class App1 {
                 continue;
             }
 
+            //연산자 입력 부분
             System.out.print("사칙연산 기호 입력:");
             inputOperator = sc.next();
 
             if (!operators.contains(inputOperator)) {
-                System.out.println("\n올바르지 않은 연산자 입니다.\n");
-                continue;
+                while (true) {
+                    if (!operators.contains(inputOperator)) {
+                        System.out.println("\n올바르지 않은 연산자 입니다.\n");
+                        System.out.print("연산자 재입력:");
+                        inputOperator = sc.next();
+                    } else {
+                        break;
+                    }
+                }
             }
             if (secondNum == 0 && "/".equals(inputOperator)) {
                 System.out.println("분모에 0이 들어갈 수 없습니다.");
                 continue;
             }
 
+            //연산 및 연산 결과 출력
             switch (inputOperator) {
                 case "+":
                     printResult (firstNum + secondNum);
@@ -53,7 +62,6 @@ public class App1 {
                 case "/":
                     printResult ((double) firstNum / secondNum);
                     break;
-
                 default:
                     break;
             }

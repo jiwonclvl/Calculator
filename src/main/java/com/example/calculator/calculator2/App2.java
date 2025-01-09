@@ -7,13 +7,14 @@ public class App2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Calculator calculate = new Calculator();
+        List<Double> list = calculate.getAnswerList();
 
         do {
             int firstNum, secondNum;
             String operators = "+ - * /";
             String inputOperator;
 
-            // 첫번째 정수 입력
+            // 정수 입력 부분
             try {
                 System.out.print("1번째 양의 정수 입력:");
                 firstNum = sc.nextInt();
@@ -30,19 +31,27 @@ public class App2 {
                 continue;
             }
 
+            //연산자 입력 부분
             System.out.print("사칙연산 기호 입력:");
             inputOperator = sc.next();
 
-            //
             if (!operators.contains(inputOperator)) {
-                System.out.println("\n올바르지 않은 연산자 입니다.\n");
-                continue;
+                while (true) {
+                    if (!operators.contains(inputOperator)) {
+                        System.out.println("\n올바르지 않은 연산자 입니다.\n");
+                        System.out.print("연산자 재입력:");
+                        inputOperator = sc.next();
+                    } else {
+                        break;
+                    }
+                }
             }
             if (secondNum == 0 && "/".equals(inputOperator)) {
                 System.out.println("\n분모에 0이 들어갈 수 없습니다.\n");
                 continue;
             }
 
+            //연산 및 연산 결과 출력
             calculate.calculate(firstNum, secondNum, inputOperator);
 
             double result = calculate.printResult();
@@ -53,15 +62,13 @@ public class App2 {
 
         } while (!"exit".equals(sc.nextLine()));
 
-        List<Double> list = calculate.getAnswerList();
-
+        //값 삭제 부분
         System.out.print("첫번째 값 삭제를 원한다면 y를 눌러주세요. y/n\n");
         if ("y".equals(sc.nextLine())) {
             calculate.setAnswerList(list);
         } else {
             System.out.print("계산을 종료합니다.\n");
         }
-
     }
 }
 
