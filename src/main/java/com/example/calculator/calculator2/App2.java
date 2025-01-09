@@ -64,7 +64,7 @@ public class App2 {
 
         //값 삭제 부분
         System.out.print("첫번째 값 삭제를 원한다면 Y를 눌러주세요. Y/N\n");
-        if ("y".equals(sc.nextLine())) {
+        if ("Y".equals(sc.nextLine())) {
             calculate.setResultList(list);
         } else {
             System.out.print("계산을 종료합니다.\n");
