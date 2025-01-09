@@ -7,7 +7,7 @@ public class App2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Calculator calculate = new Calculator();
-        List<Double> list = calculate.getAnswerList();
+        List<Double> list = calculate.getResultList();
 
         do {
             int firstNum, secondNum;
@@ -32,7 +32,7 @@ public class App2 {
             }
 
             //연산자 입력 부분
-            System.out.print("사칙연산 기호 입력:");
+            System.out.print("사칙연산 기호 입력 [+ - * /]:");
             inputOperator = sc.next();
 
             if (!operators.contains(inputOperator)) {
@@ -57,15 +57,15 @@ public class App2 {
             double result = calculate.printResult();
             System.out.println(firstNum + " " + inputOperator + " " + secondNum + " = " + result);
 
-            System.out.print("더 계산하시겠습니까? (exit 입력시 연산 종료)\n");
+            System.out.print("더 계산하시겠습니까? [exit 입력시 종료]\n");
             sc.nextLine();
 
         } while (!"exit".equals(sc.nextLine()));
 
         //값 삭제 부분
-        System.out.print("첫번째 값 삭제를 원한다면 y를 눌러주세요. y/n\n");
+        System.out.print("첫번째 값 삭제를 원한다면 Y를 눌러주세요. Y/N\n");
         if ("y".equals(sc.nextLine())) {
-            calculate.setAnswerList(list);
+            calculate.setResultList(list);
         } else {
             System.out.print("계산을 종료합니다.\n");
         }

@@ -29,7 +29,7 @@ public class App1 {
             }
 
             //연산자 입력 부분
-            System.out.print("사칙연산 기호 입력:");
+            System.out.print("사칙연산 기호 입력 [+ - * /]:");
             inputOperator = sc.next();
 
             if (!operators.contains(inputOperator)) {
@@ -66,13 +66,13 @@ public class App1 {
                     break;
             }
 
-            System.out.print("더 계산하시겠습니까? (exit 입력시 연산 종료):");
+            System.out.print("더 계산하시겠습니까? [exit 입력시 종료]");
             sc.nextLine();
 
         } while (!"exit".equals(sc.nextLine()));
     }
 
     public static void printResult(double result) {
-        System.out.println("연산 결과:" + result);
+        System.out.println("연산 결과 =" + result);
     }
 }

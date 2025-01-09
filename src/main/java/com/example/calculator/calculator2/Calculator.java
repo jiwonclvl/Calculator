@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Calculator {
-    private List<Double> answerList = new ArrayList<>();
+    private List<Double> resultList = new ArrayList<>();
     private double result;
 
 
@@ -25,18 +25,18 @@ public class Calculator {
                 //throws new 구현
                 break;
         }
-        answerList.add(result);
+        resultList.add(result);
     }
 
-    public List<Double> getAnswerList() {
-        return answerList;
+    public List<Double> getResultList() {
+        return resultList;
     }
 
     public double printResult () {
         return this.result;
     }
 
-    public void setAnswerList(List<Double> Deletelist) {
+    public void setResultList(List<Double> Deletelist) {
         removeResult(Deletelist);
     }
 
