@@ -1,5 +1,5 @@
 # Calculator Project
-Java 언어를 활용하여 두 값을 입력받아 연산을 수행하는 계산기를 제작하는 프로젝트이다. 
+Java 언어를 활용하여 콘솔을 통해 두 값을 입력받아 연산을 수행하는 계산기를 제작하는 프로젝트이다.
 
 <br>
 
@@ -7,7 +7,7 @@ Java 언어를 활용하여 두 값을 입력받아 연산을 수행하는 계�
 -  0을 포함한 양의 정수를 두 번 입력받을 수 있다. 
 -  `+`, `-`, `*`, `/` 연산을 수행한다.
 -  `exit`를 입력하면 계산을 종료할 수 있다.
--  사용자가 원할 경우, 가장 처음 수행한 연산 값을 삭제할 수 있다.
+-  사용자가 원할 경우, 가장 처음 수행한 연산 값을 삭제할 수 있다. ➡︎ App2.java에 포함된 기능이다.
 
 <br>
 
@@ -23,22 +23,25 @@ Java 언어를 활용하여 두 값을 입력받아 연산을 수행하는 계�
 
     입력 받은 두 값을 연산할 연산자를 입력하면, 해당 연산을 수행한 후 결과 값을 출력한다.
  
-    ![image](https://github.com/user-attachments/assets/a5e23f1b-5010-4030-8d04-78b60a06679e)
+    ![image](https://github.com/user-attachments/assets/98cfc05e-46fa-4b70-99c8-a22d3602ddf7)
+
  <br>
 
 3. **연산 종료** <br>
 
     연산을 종료하고 싶다면 `exit`를 입력한 후 프로그램을 종료한다.
 
-    ![image](https://github.com/user-attachments/assets/2a4667bb-3b62-4bd5-b8bd-8d35205581ea)
+    ![image](https://github.com/user-attachments/assets/f1f01589-e519-4338-b7f3-0ae5bed2298f)
+
 <br>
 
-4. **첫번째 연산 값 삭제 여부 결정 (App2.java)** <br>
+4. **첫번째 연산 값 삭제 여부 결정** <br>
 
     연산을 종료하면 사용자는 처음 수행한 연산 값을 삭제할지 말지 결정한다. <br>
     삭제를 원한다면 `Y`, 원하지 않는다면 `N`을 입력한다. 
 
-    ![image](https://github.com/user-attachments/assets/5b051646-0a29-40da-a507-d143ba3170a9)
+   ![image](https://github.com/user-attachments/assets/b56066f0-9b30-4874-888b-65d0840fa726)
+
 
 
 <br>
@@ -66,9 +69,12 @@ Java 언어를 활용하여 두 값을 입력받아 연산을 수행하는 계�
     ![image](https://github.com/user-attachments/assets/7181765d-8479-4afa-a2cd-a3ec85f315a4)
 
 
-
-
+<br>
    
+## Notes
+<br>
+
+- 본 프로젝트는 Java 프로그래밍 기초 및 예외 처리 학습을 목적으로 제작하였다. 
 
   
 
